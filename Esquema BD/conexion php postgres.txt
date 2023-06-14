@@ -1,0 +1,22 @@
+<?php
+/* connect.php */
+ 
+$host = "localhost";
+$port = "5432";
+$data = "mi_base_de_datos";
+$user = "postgres"; //usuario de postgres
+$pass = "mi_password"; //password de usuario de postgres
+ 
+$conn_string = "host=". $host . " port=" . $port . " dbname= " . $data . " user=" . $user . " password=" . $pass;
+ 
+$dbconn = pg_connect($conn_string) or die;
+ 
+//validar la conexión
+if(!$dbconn) {
+    echo "Error al conectar a la Base de datos\n";
+    exit;
+}
+else
+    echo "<strong>Conectado.</strong>";
+ 
+?>

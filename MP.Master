@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="Tesis.MP" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="icon" href="Pages/images/Logo.png">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<%--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    --%>
+    <%--<link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type='text/css' />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"> </script>--%>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.7.0.min.js"  ></script>
+    <script src="Scripts/jquery-3.7.0.js"  ></script>
+
+    
+
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server">
+            Home
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        footer {
+            background-color: #dee2e6;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            color: #000000;
+            left: 0px;
+            z-index: 1000;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <nav class="navbar bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="Home.aspx">
+                <img src="images/Sertinf.png" alt="" width="120" height="60">
+            </a>
+            <ul class="nav justify-content-end">
+                
+                <li class="nav-item dropdown" >
+                    
+                    <a class="nav-link dropdown" href="Home.aspx" role="button" data-bs-toggle="dropdown" aria-expanded="false">Archivos</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Cargo.aspx">Cargo</a></li>
+                        <li><a class="dropdown-item" href="Empleados.aspx">Empleados</a></li>
+                        <li><a class="dropdown-item" href="Marca.aspx">Marcas</a></li>
+                        <li><a class="dropdown-item" href="tipoequipo.aspx">Tipo de Equipo</a></li>
+                        <li><a class="dropdown-item" href="Usuario.aspx">Usuarios</a></li>
+                    </ul>
+                        
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown" href="Home.aspx" role="button" data-bs-toggle="dropdown" aria-expanded="false">Caja</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Caja 1</a></li>
+                        <li><a class="dropdown-item" href="#">Caja 2</a></li>
+                        <li><a class="dropdown-item" href="#">Caja 3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown" data-bs-toggle="dropdown" aria-expanded="false" role="button" href="Recepcion.aspx">Recepcion</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="Recepcion.aspx">Recepcion</a>
+                            <a class="dropdown-item" href="Cliente.aspx">Cliente</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Recepcion 2.aspx">Servicios</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Configuraciones</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Config 1</a></li>
+                        <li><a class="dropdown-item" href="#">Config 2</a></li>
+                        <li><a class="dropdown-item" href="#">Config 3</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Informes.aspx" id="informes">Informes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="LogIn.aspx" id="salir">Salir</a>
+
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <asp:ContentPlaceHolder ID="body" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <footer>
+        <center>
+            <div class="footer">
+                <p>&copy; 2022 SERTINF. All Rights Reserved | Design by <a href="LogIn.aspx" target="_blank">SERTINF</a> </p>
+            </div>
+        </center>
+    </footer>
+
+</body>
+</html>
